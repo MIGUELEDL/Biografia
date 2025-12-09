@@ -26,6 +26,12 @@ body {
     color: var(--claro);
 }
 
+section, main {
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.15); /* linha suave */
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+
 /* barra de navegação */
 .navbar {
     position: fixed;
@@ -130,27 +136,122 @@ h1 {
 .sobre-paragrafo {
     text-align: center;
     font-size: 1.3rem;
-
 }
 
-/* Sessão dos Perfis */
+/* Sessão do Sobre caixa dos icones */
+.sobre-titulo-icones {
+    color: #4dffed;
+    padding: 0.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    background-color: var(--vidro);
+}
 
+.sobre-area-icones {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 23px;
+    max-width: 600px;
+    height: 100px;
+    margin: 0 auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow:1px 1px 30px -15px rgba(156, 255, 217, 0.422);
+}
+
+.sobre-icones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 10px;
+}
+
+.sobre-icones img,
+.sobre-icones svg {
+    width: 50px;
+    height: 50px;
+    transition: .5s;
+}
+
+.sobre-icones span {
+    font-size: 10px;
+    font-weight: 600;
+    color: #e3fffa;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: .3s;
+}
+
+.sobre-icones:hover img,
+.sobre-icones:hover svg {
+    transform: scale(1.25) rotate(-2deg);
+}
+
+.sobre-icones:hover span {
+    opacity: 2;
+    transform: translateY(0);
+}
+
+/* Sessão sobre - redes sociais */
+.sobre-titulo-redes {
+    color: #4dffed;
+    padding: 0.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    background-color: var(--vidro);
+}
+
+.sobre-area-redes {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 23px;
+    max-width: 600px;
+    height: 100px;
+    margin: 0 auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow:1px 1px 30px -15px rgba(156, 255, 217, 0.422);
+}
+
+/* Sessão dos Projetos */
 a {
     text-decoration: none;
     color: inherit;
 }
 
-.perfis {
+.projetos {
     padding: 6rem 2rem;
 }
 
-.perfis-titulo {
+.projetos-titulo {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
 }
 
-.perfis-caixa {
+.projetos-caixa {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
@@ -158,7 +259,7 @@ a {
     margin: 0 auto;
 }
 
-.perfis-card {
+.projetos-card {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     backdrop-filter: blur(5px);
@@ -168,26 +269,26 @@ a {
     cursor: pointer;
 }
 
-.perfis-card:hover {
+.projetos-card:hover {
     box-shadow: 0 10px 20px #02b97cc1;
     transform: translateY(-10px) scale(1.03);
 }
 
-.perfis-img {
+.projetos-img {
     height: 200px;
     width: 100%;
     object-fit: cover;
 }
 
-.caixa-texto-perfis {
+.caixa-texto-projetos {
     padding: 1.5rem;
 }
 
-.info-perfis {
+.info-projetos {
     margin-bottom: 5px;
 }
 
-.p-perfis {
+.p-projetos {
     color: rgba(226, 232, 240, 0.8);
     line-height: 1.25rem;
 }
