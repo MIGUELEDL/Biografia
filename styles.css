@@ -139,33 +139,32 @@ h1 {
 }
 
 /* Sessão do Sobre caixa dos icones */
-.sobre-titulo-icones {
+.sobre-titulo-icones,
+.sobre-titulo-redes {
     color: #4dffed;
     padding: 0.5rem;
     max-width: 600px;
-    margin: 0 auto;
-    margin-top: 20px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    margin: 20px auto 0;
+    border-radius: 10px 10px 0 0;
     text-align: center;
     background-color: var(--vidro);
 }
 
-.sobre-area-icones {
+.sobre-area-icones,
+.sobre-area-redes {
     display: flex;
     gap: 0.5rem;
     justify-content: center;
     flex-wrap: wrap;
     padding: 23px;
     max-width: 600px;
-    height: 100px;
+    height: auto; /* <<< melhora muito no mobile */
     margin: 0 auto;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 0 0 10px 10px;
     border: 1px solid var(--vidro);
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.05);
-    box-shadow:1px 1px 30px -15px rgba(156, 255, 217, 0.422);
+    box-shadow: 1px 1px 30px -15px rgba(156, 255, 217, 0.422);
 }
 
 .sobre-icones {
@@ -205,34 +204,38 @@ h1 {
     transform: translateY(0);
 }
 
-/* Sessão sobre - redes sociais */
-.sobre-titulo-redes {
-    color: #4dffed;
-    padding: 0.5rem;
-    max-width: 600px;
-    margin: 0 auto;
-    margin-top: 20px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    text-align: center;
-    background-color: var(--vidro);
-}
+/*RESPONSIVIDADE*/
+@media (max-width: 480px) {
 
-.sobre-area-redes {
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 23px;
-    max-width: 600px;
-    height: 100px;
-    margin: 0 auto;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border: 1px solid var(--vidro);
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.05);
-    box-shadow:1px 1px 30px -15px rgba(156, 255, 217, 0.422);
+    .sobre-area-icones,
+    .sobre-area-redes {
+        padding: 15px;
+        gap: 0.3rem;
+        max-width: 95%;
+        height: auto; 
+    }
+
+    .sobre-icones {
+        width: 50px;
+    }
+
+    .sobre-icones img,
+    .sobre-icones svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .sobre-icones span {
+        font-size: 9px;
+        margin-top: 5px;
+    }
+
+    .sobre-titulo-icones,
+    .sobre-titulo-redes {
+        max-width: 95%;
+        font-size: 1rem;
+        padding: .4rem;
+    }
 }
 
 /* Sessão dos Projetos */
